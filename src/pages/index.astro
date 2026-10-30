@@ -1,0 +1,32 @@
+---
+import Base from '../layouts/Base.astro';
+import EssayList from '../components/EssayList.astro';
+import ProjectList from '../components/ProjectList.astro';
+import { SITE_TITLE, SITE_TAGLINE, SITE_DESCRIPTION } from '../consts';
+import { featuredProject, getPublishedEssays, getPublishedProjects } from '../lib/content';
+
+const essays = await getPublishedEssays();
+const projects = await getPublishedProjects();
+const featured = featuredProject(projects);
+---
+
+<Base description={SITE_DESCRIPTION}>
+	<div class="page">
+		<header class="masthead">
+			<h1>{SITE_TITLE}</h1>
+			<p class="tagline">{SITE_TAGLINE}</p>
+		</header>
+
+		<div class="desk">
+			<section class="desk-section" aria-labelledby="recent-essays">
+				<h2 id="recent-essays">Essays</h2>
+				<EssayList essays={essays.slice(0, 5)} />
+			</section>
+
+			<section class="desk-section" aria-labelledby="on-the-desk">
+				<h2 id="on-the-desk">On the desk</h2>
+				<ProjectList projects={featured ? [featured] : []} />
+			</section>
+		</div>
+	</div>
+</Base>

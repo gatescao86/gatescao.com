@@ -1,0 +1,32 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import { STATUS_LABEL } from '../lib/content';
+
+interface Props {
+	projects: CollectionEntry<'projects'>[];
+	empty?: string;
+}
+
+const {
+	projects,
+	empty = 'Nothing on the desk yet.',
+} = Astro.props;
+---
+
+{
+	projects.length === 0 ? (
+		<p class="empty">{empty}</p>
+	) : (
+		<ul class="entry-list">
+			{projects.map((project) => (
+				<li>
+					<a class="entry" href={`/projects/${project.id}`}>
+						<h3 class="entry-title">{project.data.title}</h3>
+						<p class="entry-meta">{STATUS_LABEL[project.data.status]}</p>
+						<p class="entry-blurb">{project.data.description}</p>
+					</a>
+				</li>
+			))}
+		</ul>
+	)
+}

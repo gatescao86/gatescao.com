@@ -1,0 +1,37 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import { formatDate } from '../lib/dates';
+
+interface Props {
+	essays: CollectionEntry<'essays'>[];
+	empty?: string;
+}
+
+const {
+	essays,
+	empty = 'No essays yet — this shelf is waiting.',
+} = Astro.props;
+---
+
+{
+	essays.length === 0 ? (
+		<p class="empty">{empty}</p>
+	) : (
+		<ul class="entry-list">
+			{essays.map((essay) => (
+				<li>
+					<a class="entry" href={`/essays/${essay.id}`}>
+						<h3 class="entry-title">{essay.data.title}</h3>
+						<p class="entry-meta">
+							<time datetime={essay.data.pubDate.toISOString()}>
+								{formatDate(essay.data.pubDate)}
+							</time>
+							{essay.data.tags.length > 0 && <> · {essay.data.tags.join(', ')}</>}
+						</p>
+						<p class="entry-blurb">{essay.data.description}</p>
+					</a>
+				</li>
+			))}
+		</ul>
+	)
+}

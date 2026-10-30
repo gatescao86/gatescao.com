@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://gatescao.com/sitemap-index.xml

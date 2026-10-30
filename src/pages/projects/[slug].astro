@@ -1,0 +1,59 @@
+---
+import { render, type CollectionEntry } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import MarginNote from '../../components/MarginNote.astro';
+import { getPublishedProjects, STATUS_LABEL } from '../../lib/content';
+import { formatDate } from '../../lib/dates';
+
+export async function getStaticPaths() {
+	const projects = await getPublishedProjects();
+	return projects.map((project) => ({
+		params: { slug: project.id },
+		props: { project },
+	}));
+}
+
+interface Props {
+	project: CollectionEntry<'projects'>;
+}
+
+const { project } = Astro.props;
+const { title, description, pubDate, updatedDate, status, tags, url, repo } = project.data;
+const { Content } = await render(project);
+---
+
+<Base title={title} description={description}>
+	<article class="spread">
+		<header class="spread-meta">
+			<p>{STATUS_LABEL[status]}</p>
+			<time datetime={pubDate.toISOString()}>{formatDate(pubDate)}</time>
+			{updatedDate && <p>Updated {formatDate(updatedDate)}</p>}
+			{tags.length > 0 && (
+				<ul class="tags">
+					{tags.map((tag) => <li>{tag}</li>)}
+				</ul>
+			)}
+			{(url || repo) && (
+				<ul class="project-links">
+					{url && (
+						<li>
+							<a href={url}>Site</a>
+						</li>
+					)}
+					{repo && (
+						<li>
+							<a href={repo}>Code</a>
+						</li>
+					)}
+				</ul>
+			)}
+		</header>
+		<div class="spread-main">
+			<h1>{title}</h1>
+			<p class="lede">{description}</p>
+			<div class="prose">
+				<Content components={{ MarginNote }} />
+			</div>
+		</div>
+	</article>
+</Base>

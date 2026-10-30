@@ -1,0 +1,33 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import Base from './Base.astro';
+import { formatDate } from '../lib/dates';
+
+interface Props {
+	essay: CollectionEntry<'essays'>;
+}
+
+const { essay } = Astro.props;
+const { title, description, pubDate, updatedDate, tags } = essay.data;
+---
+
+<Base title={title} description={description}>
+	<article class="spread">
+		<header class="spread-meta">
+			<time datetime={pubDate.toISOString()}>{formatDate(pubDate)}</time>
+			{updatedDate && <p>Updated {formatDate(updatedDate)}</p>}
+			{tags.length > 0 && (
+				<ul class="tags">
+					{tags.map((tag) => <li>{tag}</li>)}
+				</ul>
+			)}
+		</header>
+		<div class="spread-main">
+			<h1>{title}</h1>
+			<p class="lede">{description}</p>
+			<div class="prose">
+				<slot />
+			</div>
+		</div>
+	</article>
+</Base>

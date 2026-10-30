@@ -1,0 +1,25 @@
+---
+import { render, type CollectionEntry } from 'astro:content';
+import Essay from '../../layouts/Essay.astro';
+import MarginNote from '../../components/MarginNote.astro';
+import { getPublishedEssays } from '../../lib/content';
+
+export async function getStaticPaths() {
+	const essays = await getPublishedEssays();
+	return essays.map((essay) => ({
+		params: { slug: essay.id },
+		props: { essay },
+	}));
+}
+
+interface Props {
+	essay: CollectionEntry<'essays'>;
+}
+
+const { essay } = Astro.props;
+const { Content } = await render(essay);
+---
+
+<Essay essay={essay}>
+	<Content components={{ MarginNote }} />
+</Essay>
