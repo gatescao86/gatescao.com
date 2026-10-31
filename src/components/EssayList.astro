@@ -28,7 +28,7 @@ const {
 							</time>
 							{essay.data.tags.length > 0 && <> · {essay.data.tags.join(', ')}</>}
 						</p>
-						<p class="entry-blurb">{essay.data.description}</p>
+						{essay.data.description && <p class="entry-blurb">{essay.data.description}</p>}
 					</a>
 				</li>
 			))}

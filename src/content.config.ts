@@ -6,7 +6,7 @@ const essays = defineCollection({
 	loader: glob({ base: './src/content/essays', pattern: '**/*.{md,mdx}' }),
 	schema: z.object({
 		title: z.string(),
-		description: z.string(),
+		description: z.string().default(''),
 		pubDate: z.coerce.date(),
 		updatedDate: z.coerce.date().optional(),
 		tags: z.array(z.string()).default([]),
@@ -18,7 +18,7 @@ const projects = defineCollection({
 	loader: glob({ base: './src/content/projects', pattern: '**/*.{md,mdx}' }),
 	schema: z.object({
 		title: z.string(),
-		description: z.string(),
+		description: z.string().default(''),
 		pubDate: z.coerce.date(),
 		updatedDate: z.coerce.date().optional(),
 		status: z.enum(['in-progress', 'paused', 'done']).default('in-progress'),
