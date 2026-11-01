@@ -15,7 +15,7 @@ For now, suppose *infinity* is just a very large number. Let's think of somethin
 
 Buckle up. We are just getting started.
 
-Do you know where Google got its name? From a number known as *googol*: the digit 1 followed by one hundred zeros, or $10^{100}$. Google’s headquarters, known as the Googleplex, takes its name from an even larger number known as *googolplex*. 1 followed by *googol* number of zeros, or $10^{10^{100}}$. Googolplex is unfathomably larger than the numbers describing the dimensions of the universe we just encountered. In fact, there's not enough space to write out every digit in Googolplex using ordinary physical storage at atomic scales.
+Do you know where Google got its name? From a number known as *googol*: the digit 1 followed by one hundred zeros, or $10^{100}$. Google’s headquarters, known as the Googleplex, takes its name from an even larger number known as *googolplex*. 1 followed by *googol* number of zeros, or $10^{(10^{100})}$. Googolplex is unfathomably larger than the numbers describing the dimensions of the universe we just encountered. In fact, there's not enough space to write out every digit in Googolplex using ordinary physical storage at atomic scales.
 
 But we are not done yet. A *googolplex* is essentially a tower of exponents. Why stop at 3 levels? We can keep stacking them higher and higher. Soon, though, even writing out the exponents becomes impractical. We need a more efficient method. This is where Knuth's up-arrow notation comes in:
 
@@ -28,7 +28,7 @@ $$
 Two arrows $\uparrow \uparrow$ represent tetration:
 
 $$
-3 \uparrow \uparrow 3 = 3^{3^{3}} = 3^{27}
+3 \uparrow \uparrow 3 = 3^{(3^{3})} = 3^{27}
 $$
 
 Three arrows $\uparrow \uparrow \uparrow$ represent pentation:
@@ -59,7 +59,7 @@ $$
 ...
 $$
 
-Rinse and repeat until we hit $g_64$, which is known as the Graham’s number. It's the upper bound for the solution to a problem in Ramsey theory, a branch of mathematics in combinatorics. 
+Rinse and repeat until we hit $g_{64}$, which is known as Graham’s number. It's the upper bound for the solution to a problem in Ramsey theory, a branch of mathematics in combinatorics. 
 
 By contrast, *googolplex* is smaller than $10 \uparrow \uparrow 4$.
 

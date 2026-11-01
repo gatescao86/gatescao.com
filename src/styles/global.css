@@ -387,11 +387,14 @@ a:hover {
 
 .prose {
 	font-size: 1.02rem;
-	line-height: 1.68;
+	line-height: 1.8;
 }
 
 .prose .katex {
+	display: inline-block;
+	white-space: nowrap;
 	font-size: 1.05em;
+	vertical-align: baseline;
 }
 
 .prose .katex-display {
