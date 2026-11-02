@@ -69,7 +69,8 @@ TREE(3)
 
 The definition 
 
-Rayo's number is defined as the smallest number great first-order set theory using fewer than *googol* number of symbols. You don't need to understand the 
+
+There's one more large number that's worth mentioning: Rayo's number. It was created by Agustín Rayo, a philosophy professor at MIT, during a "Big Number Duel" competition in 2007. Rayo's number is defined as the smallest natural number greater than every finite number that can be defined using fewer than *googol* number of symbols in the formal language of first-order set theory. I realize that's quite a mouthful, but don't worry too much about the formalism. The key point is that it's so large that even Graham's number and TREE(3) are practically negligible by comparison. 
 
 A few words on set theory. In mathematics, a *set* is a collection of distinct, well-defined objects known as elements or members. By *well-defined*, we mean there's an objective rule that allows us to unambiguously determine whether an object belongs to a set.
 
@@ -81,11 +82,11 @@ $$
 \mathbb{N} = \{1,2,3,4,5 ...\}
 $$
 
-This set contains all the mind-bogglingly large numbers we've discussed so far. But can we obtain an even larger number than say, Rayo's number? Of course! And it's trivial. Just add 1 to get R + 1. And add 1 to that number to get R + 2. And add 1 to that number to get R + 3. We can go on forever. Yet, N contains all of these numbers because they are natural numbers. What does that tell us about the *cardinality* of $\mathbb{N}$? It's infinite! The mathematician Georg Cantor (1845-1918) called this cardinality $\aleph_0$. At this point, one thing should be clear: infinity is not just a very large natural number. 
+This set contains all the mind-bogglingly large numbers we've discussed so far. But can we obtain an even larger number than say, Rayo's number? I claim we can and it's trivial. Just add 1 to get R + 1. And add 1 to that number to get R + 2. And add 1 to that number to get R + 3. We can go on forever. Yet, N contains all of these numbers because they are natural numbers. What does that tell us about the *cardinality* of $\mathbb{N}$? It's infinite! The mathematician Georg Cantor (1845-1918) called this cardinality $\aleph_0$. At this point, one thing should be clear: infinity is not just a very large natural number. 
 
 You may have noticed we have only talked about natural numbers so far. How about the set of all integers $\mathbb{Z}$ and the set of all rational numbers $\mathbb{Q}$ (i.e., numbers that can be written in the form of fractions)? 
 
-It's easy to see $\mathbb{N} \subseteq \mathbb{Z} \subseteq \mathbb{Q}$, but I claim that they all have the same cardinality $\aleph_0$. How' this possible? Cantor's brilliant insight is that two sets have the same cardinality if their elements can be put into a *one-to-one correspondence*, also known as *bijection*. Suppose we define a set $P^{*} = \{\text{Mirka}, \text{Xisca}, \text{Jelena}\}$. We can pair off the elements in $P$ and $P^{*}$:
+It's easy to see $\mathbb{N} \subseteq \mathbb{Z} \subseteq \mathbb{Q}$, but I claim that they all have the same cardinality $\aleph_0$. How's this possible? Cantor's brilliant insight is that two sets have the same cardinality if their elements can be put into a *one-to-one correspondence*. Suppose we define a set $P^{*} = \{\text{Mirka}, \text{Xisca}, \text{Jelena}\}$. We can pair off the elements in $P$ and $P^{*}$:
 
 Federer $\rightarrow$ Mirka
 
@@ -94,7 +95,6 @@ Nadal $\rightarrow$ Xisca
 Djokovic $\rightarrow$ Jelena 
 
 And conclude $|P| = |P^*|$.
-
 
 We can list the integers in the following sequence:
 
@@ -116,23 +116,54 @@ $5 \rightarrow -2$
 
 ...
 
-The 
+
 
 Proof that $|\mathbb{Q}| = \aleph_0$
 
-Proof that $|\mathbb{R}|$ is greater than $\aleph_0$
+Suppose the real numbers between 0 and 1 can be completely listed in a sequence and put into a one-to-one correspondence with every natural number. For example:
+
+$1 \rightarrow 0.\mathbf{2}9583...$
+
+$2 \rightarrow 0.3\mathbf{8}652...$
+
+$3 \rightarrow 0.83\mathbf{5}29...$
+
+$4 \rightarrow 0.492\mathbf{3}7...$
+
+$5 \rightarrow 0.7136\mathbf{1}...$
+
+...
+
+Now, let's construct a real number $x$ using the bolded digits on the main diagonal:
+
+We add 1 to the 1st digit from the first number, and use it as $x$'s first digit.
+
+We add 1 to the 2nd digit from the second number, and use it as $x$'s second digit. 
+
+We add 1 to the 3rd digit from the third number, and use it as $x$'s third digit. 
+
+...
+
+Compare $x$ to the list:
+
+Is $x$ the first number in the list? No, because it differs in the 1st decimal place.
+
+Is $x$ the second number in the list? No, because it differs in the 2nd decimal place. 
+
+Is $x$ the third number in the list? No, because it differs in the 3rd decimal place. 
+
+...
+
+Clearly, $x$ is not in the list. But wait a second. Didn't we assume our list is complete and contains *all* real numbers between 0 and 1? The contradiction means our assumption must be false. This is Cantor's diagonal argument. And it has an astonishing implication - *infinity* has different sizes! $|\mathbb{R}|$ is strictly larger than $|\mathbb{N}|$ and is *uncountable* because any proposed complete enumeration of the real numbers must miss at least one number.
 
 Mention there are infinite number of infinities (do we need to go into the proof using power sets?) 
 
 Raises the philosophical question of what math is? 
 
-Diagonal argument.
-
 $2^{\aleph_0}$
 
 This raises a deeper question: Does mathematics exist independently of physical reality? Or is it a human invention, a game of symbols and logic governed by rules we made up? 
 
-And if it's something 
 
 
 
