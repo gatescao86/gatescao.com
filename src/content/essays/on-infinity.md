@@ -11,7 +11,9 @@ $$
 
 This reads: the limit of one over x is zero as x approaches infinity. As a student, I accepted it without much thought. But what exactly is infinity? Is it an unimaginably large number? Or is it something fundamentally different?
 
-For now, suppose *infinity* is just a very large number. Let's think of something big. Really big. As big as the universe. We know that the diameter of the observable universe is about 93 billion light-years, or $8.8 \times 10^{26}$ meters. Planck length, the smallest unit of measurement for distance, is $1.62 \times 10^{-35}$ meters. This means the observable universe is $5.4 \times 10^{61}$ in Planck length across. We also know that the universe is about 13.8 billion old. That's $4.35 \times 10^{17}$ in seconds. Planck time, the shortest unit of time, is $5.39 \times 10^{-44}$ seconds. That makes the universe $8 \times 10^{60}$ Planck times old. And the total number of atoms in the observable universe? An estimated $10^{80}$. These are enormous numbers that test the limit of human intuition.
+For now, suppose *infinity* is just a very large number. Let's think of something big. Really big. As big as the universe. 
+
+We know that the diameter of the observable universe is about 93 billion light-years, or $8.8 \times 10^{26}$ meters. Planck length, the smallest unit of measurement for distance, is $1.62 \times 10^{-35}$ meters. This means the observable universe is $5.4 \times 10^{61}$ in Planck length across. We also know that the universe is about 13.8 billion old. That's $4.35 \times 10^{17}$ in seconds. Planck time, the shortest unit of time, is $5.39 \times 10^{-44}$ seconds. That makes the universe $8 \times 10^{60}$ Planck times old. And the total number of atoms in the observable universe? An estimated $10^{80}$. These are enormous numbers that test the limit of human intuition.
 
 Buckle up. We are just getting started.
 
@@ -71,47 +73,62 @@ Rayo's number is defined as the smallest number great first-order set theory usi
 
 A few words on set theory. In mathematics, a *set* is a collection of distinct, well-defined objects known as elements or members. By *well-defined*, we mean there's an objective rule that allows us to unambiguously determine whether an object belongs to a set.
 
-For example, P = {Federer, Nadal, Djokovic} is a set of tennis players. Since P contains three distinct elements, its size, or *cardinality* is 3: $|P| = 3$
+For example, $P = \{\text{Federer}, \text{Nadal}, \text{Djokovic}\}$ is a set of tennis players. Since $P$ contains three distinct elements, its size, or *cardinality* is 3: $|P| = 3$
 
-Now consider the set of all natural numbers $\mathbb{N}$
+Now consider the set of all natural numbers $\mathbb{N}$:
 
 $$
-\mathbb{N} = \{0,1,2,3,4,5 ...\}
+\mathbb{N} = \{1,2,3,4,5 ...\}
 $$
 
 This set contains all the mind-bogglingly large numbers we've discussed so far. But can we obtain an even larger number than say, Rayo's number? Of course! And it's trivial. Just add 1 to get R + 1. And add 1 to that number to get R + 2. And add 1 to that number to get R + 3. We can go on forever. Yet, N contains all of these numbers because they are natural numbers. What does that tell us about the *cardinality* of $\mathbb{N}$? It's infinite! The mathematician Georg Cantor (1845-1918) called this cardinality $\aleph_0$. At this point, one thing should be clear: infinity is not just a very large natural number. 
 
-You may have noticed we have only talked about natural numbers so far. How about the set of all integers $\mathbb{Z}$ or the set of all rational numbers $\mathbb{Q}$ (i.e., numbers that can be written in the form of fractions)? 
+You may have noticed we have only talked about natural numbers so far. How about the set of all integers $\mathbb{Z}$ and the set of all rational numbers $\mathbb{Q}$ (i.e., numbers that can be written in the form of fractions)? 
 
-It's easy to see $\mathbb{N} \subseteq \mathbb{Z} \subseteq \mathbb{Q}$, but I claim that they all have the same cardinality $\aleph_0$. How' this possible? Cantor's brilliant insight is that two sets have the same cardinality if their elements can be put into a *one-to-one correspondence*. Suppose we define a set $P^*$ = {Mirka, Xisca, Jelena}. We can pair off the elements in $P$ and $P^*$:
+It's easy to see $\mathbb{N} \subseteq \mathbb{Z} \subseteq \mathbb{Q}$, but I claim that they all have the same cardinality $\aleph_0$. How' this possible? Cantor's brilliant insight is that two sets have the same cardinality if their elements can be put into a *one-to-one correspondence*, also known as *bijection*. Suppose we define a set $P^{*} = \{\text{Mirka}, \text{Xisca}, \text{Jelena}\}$. We can pair off the elements in $P$ and $P^{*}$:
 
 Federer $\rightarrow$ Mirka
+
 Nadal $\rightarrow$ Xisca
-Djokovic $\rightarrow$ Jelena
+
+Djokovic $\rightarrow$ Jelena 
 
 And conclude $|P| = |P^*|$.
 
-The same argument applies to sets with infinite cardinality. Still don't believe me? Here's the proof that $|\mathbb{N}| = |\mathbb{Z}|$:
 
-We order the integers in the following way:
+We can list the integers in the following sequence:
 
 $$
 \mathbb{Z} = \{0,1,-1,2,-2,3,-3 ...\}
 $$
 
-We can pair off each element in $\mathbb{Z}$ with an element in $\mathbb{N}$ by position:
+Then, pair off each element in $\mathbb{Z}$ with an element in $\mathbb{N}$ by position:
 
-$0 \rightarrow 0$
-$1 \rightarrow 1$
-$2 \rightarrow -1$ 
-$3 \rightarrow 2$
-$4 \rightarrow -2$
-$\(n \leftrightarrow \begin{cases} \frac{n}{2} & \text{if } n \text{ is even} \\ -\frac{n+1}{2} & \text{if } n \text{ is odd} \end{cases}\)$
+$1 \rightarrow 0$
 
+$2 \rightarrow 1$
 
-Infinities also have different sizes!
+$3 \rightarrow -1$ 
+
+$4 \rightarrow 2$
+
+$5 \rightarrow -2$
+
+...
+
+The 
+
+Proof that $|\mathbb{Q}| = \aleph_0$
+
+Proof that $|\mathbb{R}|$ is greater than $\aleph_0$
+
+Mention there are infinite number of infinities (do we need to go into the proof using power sets?) 
+
+Raises the philosophical question of what math is? 
 
 Diagonal argument.
+
+$2^{\aleph_0}$
 
 This raises a deeper question: Does mathematics exist independently of physical reality? Or is it a human invention, a game of symbols and logic governed by rules we made up? 
 
