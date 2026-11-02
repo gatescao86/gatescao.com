@@ -67,7 +67,7 @@ TREE(3)
 
 The definition 
 
-Rayo's number
+Rayo's number is defined as the smallest number great first-order set theory using fewer than *googol* number of symbols. You don't need to understand the 
 
 A few words on set theory. In mathematics, a *set* is a collection of distinct, well-defined objects known as elements or members. By *well-defined*, we mean there's an objective rule that allows us to unambiguously determine whether an object belongs to a set.
 
@@ -76,26 +76,38 @@ For example, P = {Federer, Nadal, Djokovic} is a set of tennis players. Since P 
 Now consider the set of all natural numbers $\mathbb{N}$
 
 $$
-\mathbb{N} = \{1,2,3,4,5 ...\}
+\mathbb{N} = \{0,1,2,3,4,5 ...\}
 $$
 
 This set contains all the mind-bogglingly large numbers we've discussed so far. But can we obtain an even larger number than say, Rayo's number? Of course! And it's trivial. Just add 1 to get R + 1. And add 1 to that number to get R + 2. And add 1 to that number to get R + 3. We can go on forever. Yet, N contains all of these numbers because they are natural numbers. What does that tell us about the *cardinality* of $\mathbb{N}$? It's infinite! The mathematician Georg Cantor (1845-1918) called this cardinality $\aleph_0$. At this point, one thing should be clear: infinity is not just a very large natural number. 
 
 You may have noticed we have only talked about natural numbers so far. How about the set of all integers $\mathbb{Z}$ or the set of all rational numbers $\mathbb{Q}$ (i.e., numbers that can be written in the form of fractions)? 
 
-It's easy to see $\mathbb{N} \subseteq \mathbb{Z} \subseteq \mathbb{Q}$, but I claim that they all have the same cardinality $\aleph_0$! How' this possible? Cantor's brilliant insight is that two sets have the same cardinality if their elements can be put into a *one-to-one correspondence*. Suppose we define a set $P^*$ = {Mirka, Xisca, Jelena}. We can pair off the elements in $P$ and $P^*$:
+It's easy to see $\mathbb{N} \subseteq \mathbb{Z} \subseteq \mathbb{Q}$, but I claim that they all have the same cardinality $\aleph_0$. How' this possible? Cantor's brilliant insight is that two sets have the same cardinality if their elements can be put into a *one-to-one correspondence*. Suppose we define a set $P^*$ = {Mirka, Xisca, Jelena}. We can pair off the elements in $P$ and $P^*$:
 
-$$
-Federer \rightarrow Mirka \\
-Nadal \rightarrow Xisca \\
-Djokovic \rightarrow Jelena \\
-$$
+Federer $\rightarrow$ Mirka
+Nadal $\rightarrow$ Xisca
+Djokovic $\rightarrow$ Jelena
 
 And conclude $|P| = |P^*|$.
 
-The same argument applies to sets with infinite cardinality. Still don't believe me? Here's the proof that $|\mathbb{N}| = |\mathbb{Q}|$:
+The same argument applies to sets with infinite cardinality. Still don't believe me? Here's the proof that $|\mathbb{N}| = |\mathbb{Z}|$:
 
-(Proof)
+We order the integers in the following way:
+
+$$
+\mathbb{Z} = \{0,1,-1,2,-2,3,-3 ...\}
+$$
+
+We can pair off each element in $\mathbb{Z}$ with an element in $\mathbb{N}$ by position:
+
+$0 \rightarrow 0$
+$1 \rightarrow 1$
+$2 \rightarrow -1$ 
+$3 \rightarrow 2$
+$4 \rightarrow -2$
+$\(n \leftrightarrow \begin{cases} \frac{n}{2} & \text{if } n \text{ is even} \\ -\frac{n+1}{2} & \text{if } n \text{ is odd} \end{cases}\)$
+
 
 Infinities also have different sizes!
 
