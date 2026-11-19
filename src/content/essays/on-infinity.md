@@ -3,51 +3,43 @@ title: On Infinity
 pubDate: 2026-10-30
 ---
 
-I first encountered the mathematical concept of infinity in my calculus class. We learned something like 
+The idea of *infinity* has always been unsettling to me. 
 
-$$
-\lim_{x\rightarrow \infty} \frac{1}{x} = 0
-$$
+Ancient civilizations turned to the natural world to evoke a sense of the infinite: Buddhist scriptures speak of the grains of sand in the Ganges River, while the Bible compares Abrahm's descendants to the stars in the sky and the sand on the seashore. Yet all these quantities, vast as they are, are finite[^1]. Even the observable universe itself contains "only" an estimated $10^{80}$ atoms. The physical world seems to offer little help in understanding *infinity*. 
 
-This reads: the limit of one over x is zero as x approaches infinity. As a student, I accepted it without much thought. But what exactly is infinity? Is it an unimaginably large number? Or is it something fundamentally different?
+But fret not! The ingenuity of the human mind allows us to conceive of numbers far beyond anything found in the physical universe. 
 
-For now, suppose *infinity* is just a very large number. Let's think of something big. Really big. As big as the universe. 
+Do you know where Google got its name? From a number known as *googol*: the digit 1 followed by one hundred zeros, or $10^{100}$. Google’s headquarters, known as the Googleplex, takes its name from an even larger number known as *googolplex*: 1 followed by a *googol* number of zeros, or $10^{(10^{100})}$. Googolplex is so unfathomably large that there aren't enough atoms in the observable universe to write out every digit!
 
-We know that the diameter of the observable universe is about 93 billion light-years, or $8.8 \times 10^{26}$ meters. The Planck length[^1], the smallest unit of measurement for distance, is $1.62 \times 10^{-35}$ meters. This means the observable universe is $5.4 \times 10^{61}$ in Planck length across. We also know that the universe is about 13.8 billion years old. That's $4.35 \times 10^{17}$ in seconds. Planck time, the shortest unit of time, is $5.39 \times 10^{-44}$ seconds. That makes the universe $8 \times 10^{60}$ Planck times old. And the total number of atoms in the observable universe? An estimated $10^{80}$. These are extraodinary numbers that describe the scale of the observable universe as we understand it today.
+But we can keep going. As you can see, *googolplex* can be represented by a tower of exponents. Why stop at 3 levels? We can keep stacking them higher and higher. Soon, though, even writing out the exponents becomes impractical. We need a more efficient method. This is where *Knuth's up-arrow notation* comes in:
 
-Buckle up. We are just getting started.
-
-Do you know where Google got its name? From a number known as *googol*: the digit 1 followed by one hundred zeros, or $10^{100}$. Google’s headquarters, known as the Googleplex, takes its name from an even larger number known as *googolplex*: 1 followed by *googol* number of zeros, or $10^{(10^{100})}$. Googolplex is unfathomably larger than the numbers describing the dimensions of the universe we just encountered. In fact, there's not enough space to write out every digit in Googolplex using ordinary physical storage at atomic scales.
-
-But we are not done yet. A *googolplex* is essentially a tower of exponents. Why stop at 3 levels? We can keep stacking them higher and higher. Soon, though, even writing out the exponents becomes impractical. We need a more efficient method. This is where Knuth's up-arrow notation comes in:
-
-One arrow $\uparrow$ represents exponentiation:
+One arrow $\uparrow$:
 
 $$
 3 \uparrow 3 = 3^{3} = 27
 $$
 
-Two arrows $\uparrow \uparrow$ represent tetration:
+Two arrows $\uparrow \uparrow$:
 
 $$
 3 \uparrow \uparrow 3 = 3^{(3^{3})} = 3^{27}
 $$
 
-Three arrows $\uparrow \uparrow \uparrow$ represent pentation:
+Three arrows $\uparrow \uparrow \uparrow$:
 
 $$
 3 \uparrow \uparrow \uparrow 3 = 3 \uparrow \uparrow (3 \uparrow \uparrow 3)
 $$
 
-Four arrows $\uparrow \uparrow \uparrow \uparrow$ represent hexation:
+(~7.6 trillion 3s stacking up in an exponent tower)
+
+Four arrows $\uparrow \uparrow \uparrow \uparrow$:
 
 $$
 3 \uparrow \uparrow \uparrow \uparrow 3 = 3 \uparrow \uparrow \uparrow (3 \uparrow \uparrow \uparrow 3)
 $$
 
-Feeling a little dizzy? You are not alone. But stay with me.
-
-The last number with four arrows is defined as $g_1$, and we can use it to construct even larger numbers.
+I can't even begin to comprehend the size of the last number. But let's call it $g_1$ and use it to construct even larger numbers.
 
 $$
 g_2 = 3 \uparrow^{g_{1}} 3
@@ -66,33 +58,41 @@ $$
 ...
 $$
 
-Rinse and repeat until we hit $g_{64}$, which is known as *Graham’s number*. It's the upper bound for the solution to a problem in Ramsey theory, a branch of mathematics in combinatorics. 
+Rinse and repeat until we reach $g_{64}$, which is known as *Graham’s number*. It arose as an upper bound in a problem in combinatorics. Pause for a moment 
 
-By contrast, *googolplex* is only somewhere between $10 \uparrow \uparrow 3$ and $10 \uparrow \uparrow 4$! 
+So far, we've been constructing large numbers by repeatedly applying mathematical operations. But during a "Big Number Duel" competition in 2007, Agustín Rayo, a philosophy professor at MIT, took a radically different approach. He first fixed a formal language (a system of symbols and precise rules for combining them into valid expressions) and a limit on the number of symbols (a googol). He then considered the collection of all numbers that could be uniquely described within those constraints, and simply defined *Rayo's number* as the smallest number greater than every number in the collection. It's so ridiculously large that *Graham's number* is practically negligible in comparison.
 
-There's one more number worth mentioning: *Rayo's number*. It was created by Agustín Rayo, a philosophy professor at MIT, during a "Big Number Duel" competition in 2007. 
+To appreciate the scale of the constraint that Rayo imposed, imagine writing down one mathematical symbol every Planck time[^2]. Even if you had been continuously writing since the beginning of the universe, you would be nowhere close to reaching a googol symbols! And remember, a googol is merely the number of symbols allowed to describe the number, not the number itself.
 
-Rayo took a radically different approach. Instead of constructing large numbers by repeatedly applying mathematical operations, he first fixed a formal language (first-order set theory) and a limit on the number of symbols (a googol). He then asked: *What is the largest number that could be described within those constraints?* Rather than attempting to construct that number explicitly, he simply defined Rayo's number as the smallest number greater than it. 
+But can we obtain an even larger number than Rayo's number? I claim we can and it's trivial. Just add 1 to get (R+1). And add 1 to that number to get (R+2). And add 1 to that number to get (R+3). You get the idea. Despite the herculean effort of constructing mind-bending large numbers, we can always count upward to obtain larger ones. This process never ends, an idea known as *potential infinity*. 
 
-To appreciate the scale of the constraint that Rayo imposed, imagine writing down one mathematical symbol every Planck time. Even if you had been continuously writing since the beginning of the universe, you would be nowhere close to reaching a googol symbols! And remember, a googol is merely the number of symbols allowed to describe the number, not the number itself. The resulting number is so ridiculously large that even Graham's number is practically negligible by comparison.
-
-Whew, what a journey so far! I hope you are not feeling nauseous from thinking about all those big numbers, because we are just about to enter the kingdom of *infinity*. 
-
-But first, a few words on set theory. In mathematics, a *set* is a collection of distinct, well-defined objects known as elements or members. By *well-defined*, we mean there's an objective rule that allows us to unambiguously determine whether an object belongs to a set.
-
-For example, $P = \{\text{Federer}, \text{Nadal}, \text{Djokovic}\}$ is a set of tennis players[^1]. Since $P$ contains three distinct elements, its size, or *cardinality* is 3: $|P| = 3$
-
-Now consider the set of all natural numbers $\mathbb{N}$:
+This concept should be familiar if you've taken a calculus class. For example:
 
 $$
-\mathbb{N} = \{1,2,3,4,5 ...\}
+\lim_{x\rightarrow \infty} \frac{1}{x} = 0
 $$
 
-This set contains all the mind-bogglingly large numbers we've discussed so far. But can we obtain an even larger number than say, Rayo's number? I claim we can and it's trivial. Just add 1 to get R + 1. And add 1 to that number to get R + 2. And add 1 to that number to get R + 3. We can go on forever. Yet, $\mathbb{N}$ contains all of these numbers because they are finite, natural numbers. What does that tell us about the *cardinality* of $\mathbb{N}$? It's infinite! The mathematician Georg Cantor (1845-1918) called this cardinality $\aleph_0$. At this point, one thing should be clear: *infinity* is not just a very large number, but something fundamentally different. 
+As $x$ grows without bound, $\frac{1}{x}$ approaches zero.
 
-You may have noticed we have only talked about natural numbers so far. How about the set of all integers $\mathbb{Z}$ and the set of all rational numbers $\mathbb{Q}$ (i.e., numbers that can be written in the form of fractions)? 
+Frankly, this is a rather disappointing result. Sure, we know we can count forever. Sure, we know all those numbers are still finite. But we've barely advanced our understanding of *infinity* and its properties!
 
-It's easy to see $\mathbb{N} \subseteq \mathbb{Z} \subseteq \mathbb{Q}$, but I claim that they all have the same cardinality $\aleph_0$. How's this possible? Cantor's brilliant insight is that two sets have the same cardinality if their elements can be put into a *one-to-one correspondence*. 
+Alright, alright. At this point, it's clear that we need a fundamentally different idea. And that idea happens to be the foundation of modern mathematics: *set theory*.
+
+In mathematics, a *set* is a collection of distinct objects known as elements. For example, $P = \{\text{Federer}, \text{Nadal}, \text{Djokovic}\}$ is a set of tennis players[^3]. Since $P$ contains three distinct elements, its size, or *cardinality*, is 3: $|P| = 3$.
+
+Now, can we define a set that contains every natural number, however large? Why not! Let's call this set $\mathbb{N}$:
+
+$$
+\mathbb{N} = \{1,2,3,4,5, ...\}
+$$
+
+Notice what we've done here. Unlike the set of tennis players, $\mathbb{N}$ has no last element. Yet we are treating it as a single, completed collection. What does that tell us about the *cardinality* of $\mathbb{N}$? It's infinite! The mathematician Georg Cantor (1845-1918) called this cardinality $\aleph_0$ (aleph-null)[^4].
+
+Similarly, we can define $\mathbb{Z}$ as the set of all *integers* and $\mathbb{Q}$ as the set of all *rational numbers* (i.e., numbers that can be written in the form of fraction). It's easy to see that $\mathbb{Z}$ includes all elements in $\mathbb{N}$, and $\mathbb{Q}$ includes all elements in both $\mathbb{N}$ and $\mathbb{Z}$. In other words, $\mathbb{Z}$ is a subset of $\mathbb{Q}$, and $\mathbb{N}$ is a subset of both $\mathbb{Z}$ and $\mathbb{Q}$. We can write out these relationships as $\mathbb{N} \subset \mathbb{Z} \subset \mathbb{Q}$, where $\subset$ is the symbol for *is subset of*.
+
+Here comes the question: What are the cardinalities of $\mathbb{Z}$ and $\mathbb{Q}$? 
+
+The answer is $\aleph_0$! How's this possible? Cantor's brilliant insight is that two sets have the same cardinality if their elements can be put into a *one-to-one correspondence*. 
 
 Suppose we define a set $P^{*} = \{\text{Mirka}, \text{Xisca}, \text{Jelena}\}$. We can pair off the elements in $P$ and $P^{*}$:
 
@@ -104,7 +104,7 @@ Djokovic $\rightarrow$ Jelena
 
 And conclude $|P| = |P^*|$.
 
-Likewise, we can list the integers in the following sequence:
+Likewise, we can arrange the integers in the following sequence:
 
 $$
 \mathbb{Z} = \{0,1,-1,2,-2,3,-3 ...\}
@@ -124,11 +124,13 @@ $5 \rightarrow -2$
 
 $...$
 
-
+The point is, every natural number can be paired with an integer, and every integer appears somewhere in the sequence. Therefore, $|\mathbb{N}|$ = $|\mathbb{Z}|$ = $\aleph_0$.
 
 Proof that $|\mathbb{Q}| = \aleph_0$
 
-Suppose the real numbers between 0 and 1 can be completely listed in a sequence and put into a one-to-one correspondence with every natural number. For example:
+There are also *irrational numbers*, such as $\pi$ and $\sqrt{2}$, that cannot be expressed as ratios of two integers. Together with all rational numbers, they form the set of *real numbers*, denoted by $\mathbb{R}$. Equivalently, real numbers can be represented as points on a continuous number line. So $\mathbb{N} \subset \mathbb{Z} \subset \mathbb{Q} \subset \mathbb{R}$.
+
+Is the cardinality of $\mathbb{R}$ also $\aleph_0$? Let's find out.  Suppose the real numbers between 0 and 1 can be completely listed in a sequence and put into a one-to-one correspondence with every natural number. For example:
 
 $1 \rightarrow 0.\mathbf{2}9583...$
 
@@ -164,21 +166,22 @@ Is $x$ the third number in the list? No, because it differs in the 3rd decimal p
 
 Clearly, $x$ is not in the list. But wait a second. Didn't we assume our list is complete and contains *all* real numbers between 0 and 1? The contradiction means our assumption must be false. This is Cantor's diagonal argument and it has an astonishing implication - *infinity* has different sizes! $|\mathbb{R}|$ is strictly larger than $|\mathbb{N}|$ and is *uncountable* because any proposed complete enumeration of the real numbers must miss at least one number.
 
-Another way of defining infinity is ordinals. $\omega$
+$2^{\aleph_0}$
+
+Since we are treating $|\mathbb{N}|$ as a single mathematical object,  $\omega$
 
 Mention there are infinite number of infinities (do we need to go into the proof using power sets?) 
 
-$2^{\aleph_0}$
+
 
 How can the human mind, made up of , construct that the physical universe cannot represent? 
 
 This raises a deeper question: Does mathematics exist independently of physical reality? Or is it a human invention, a game of symbols and logic governed by rules we made up? 
 
-
-[^1]: Planck units \
-[^1]: In math, tree is a graph \
-[^1]: Yes, I'm a huge tennis fan.
+Reflect on what this reveals about mathematics—that it is not just about calculating numbers, but about building consistent logical worlds that go beyond physical limits.
 
 
-
-
+[^1]: There are rougly $10^{15}$ grains of sand in the Ganges River and $10^{25}$ stars in the universe. \
+[^2]: Planck time ($5.39 \times 10^{-44}$ seconds) is a fundamental timescale in physics, below which our current understanding of general relativity and quantum mechanics breaks down. \
+[^3]: Yes I'm a big tennis fan. \
+[^4]: $\aleph$ is the first letter in the Hebrew alphabet.
