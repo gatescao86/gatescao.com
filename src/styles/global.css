@@ -484,6 +484,56 @@ a:hover {
 	margin: 1.5rem 0;
 }
 
+.tree-diagram {
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	margin: 1.5rem 0;
+}
+
+.tree-diagram svg {
+	display: block;
+	overflow: visible;
+	color: var(--ink);
+}
+
+.tree-diagram--row {
+	align-items: flex-start;
+	flex-wrap: wrap;
+	gap: 2.4rem;
+}
+
+.tree-diagram--pair {
+	flex-wrap: nowrap;
+	align-items: flex-start;
+	gap: 3rem;
+	overflow-x: auto;
+}
+
+.tree-diagram--pair svg {
+	flex-shrink: 0;
+}
+
+.tree-example {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 0.55rem;
+	width: 7.2rem;
+}
+
+.tree-example--wide {
+	width: 12.5rem;
+}
+
+.prose .tree-example p {
+	margin: 0;
+	font-size: 0.78rem;
+	line-height: 1.35;
+	color: var(--ink-muted);
+	text-align: center;
+}
+
 .prose figcaption {
 	margin-top: 0.4rem;
 	font-family: var(--font-sans);
