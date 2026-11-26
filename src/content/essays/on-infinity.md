@@ -119,7 +119,7 @@ The last rule requires some explanation. By containment, we mean that we can fin
 Let's define a function TREE(n) to measure the maximum number of trees you can draw with $n$ colors before the game must end. What do you think TREE(3) is? A billion? A *googol*? A *googolplex*?? Think bigger. TREE(3) is so ridiculously large that even *Graham's number* is practically negligible in comparison! In fact, proving the tree game must end at some point using standard finite arithmetic requires at least $2 \uparrow \uparrow 1000 =
 \underbrace{2^{2^{2^{\cdot^{\cdot^{\cdot^{2}}}}}}}_{1{,}000 \text{ copies of } 2}$ symbols. Imagine writing down one symbol every Planck time[^2]. Even if you had been continuously writing since the beginning of the universe, you would be nowhere close. Let that sink in. 
 
-But can we obtain an even larger number than TREE(3)? I claim we can, and it's trivial. Just add 1 to get (TREE(3)+1). And add 1 to that number to get (TREE(3)+2). And add 1 to that number to get (TREE(3)+3). You get the idea. Despite the herculean effort of constructing mind-bendingly large numbers, we can always count upward to obtain larger ones. This process never ends, an idea known as *potential infinity*.
+But can we obtain an even larger number than TREE(3)? I claim we can, and it's trivial. Just add 1 to get (TREE(3)+1). And add 1 to that number to get (TREE(3)+2). And add 1 to that number to get (TREE(3)+3). You get the idea. Despite the Herculean effort of constructing mind-bendingly large numbers, we can always count upward to obtain larger ones. This process never ends, an idea known as *potential infinity*.
 
 This concept should be familiar if you've taken a calculus class. For example:
 
@@ -248,7 +248,7 @@ $$
 \mathbb{R} \rightarrow \mathcal P(\mathbb{R}) \rightarrow \mathcal P (\mathcal P(\mathbb{R})) \rightarrow ...
 $$
 
-Cantor's theorem guarantees that the power set of any set has a strictly larger cardinality than the original set. What does this imply? There are *infinitely many sizes of infinity*! I certainly did not see that coming.
+Cantor's theorem guarantees that the power set of any set has a strictly larger cardinality than the original set. What does this imply? There are *infinitely many sizes of infinity*! I certainly did not see that coming when I first encountered the idea.
 
 $$
 ---------
