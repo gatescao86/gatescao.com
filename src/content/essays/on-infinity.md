@@ -1,5 +1,6 @@
 ---
 title: On Infinity
+description: Large Numbers, the Hierarchy of Infinity, and the Philosophy of Mathematics
 pubDate: 2026-11-26
 ---
 
